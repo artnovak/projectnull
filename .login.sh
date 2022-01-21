@@ -24,12 +24,14 @@ if grep $x /etc/passwd
 			sudo useradd $x
 			sleep 1
                 	sudo passwd $x
+			su $x
 		elif [ $x1 = new ]
 		then
 			read -p "Write your newname: " name
 	 		sudo useradd $name
         		sleep 1
         		sudo passwd $name
+			su $name 
 		fi
         elif [ $x1 = n ]
 	then
