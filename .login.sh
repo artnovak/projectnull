@@ -12,6 +12,7 @@ read -p "Type: " x
 if grep $x /etc/passwd
 	then
 		echo "That user is Exists"
+		su $x
 	else
 	        sleep 1
         	read -p "Do you want to add new user?(y/n)" x1
